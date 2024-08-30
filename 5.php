@@ -9,4 +9,17 @@ rsort($gabungan);
 foreach ($gabungan as $bilangan) {
     echo $bilangan . " , ";
 }
+
+// for ($i = 0; $i < count($gabungan); $i++) {
+//     $bilangan = $gabungan[$i];
+//     echo $bilangan . " , ";
+// }
+
+// $i = 0;
+// while ($i < count($gabungan)) {
+//     $bilangan = $gabungan[$i];
+//     echo $bilangan . " , ";
+//     $i++;
+// }
+
 ?>

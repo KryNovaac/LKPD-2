@@ -22,7 +22,7 @@ echo "<ol>";
 foreach ($barang as $item) {
     $subTot = $item['harga'] * $item['jumlahBeli'];
     $totalHar += $subTot;
-    $formatSub = number_format($subTot, 0, ',', '.');
+    $formatSub = number_format($subTot, 2, ',', '.');
     echo "<li>{$item['nama']} ({$item['jumlahBeli']}) : {$formatSub}</li>";
 }
 echo "</ol>";

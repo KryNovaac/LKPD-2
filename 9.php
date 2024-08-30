@@ -14,11 +14,15 @@ function cariJenisKoin($jumlahUang) {
         $jenisKoin[] = '200';
         $jumlahUang -= 200;
     }
+    if ($jumlahUang >= 100) {
+        $jenisKoin[] = '100';
+        $jumlahUang -= 100;
+    }
 
     return $jenisKoin;
 }
 
-$uang = 1750;
+$uang = 600;
 $hasil = cariJenisKoin($uang);
 
 echo "Jenis koin yang bisa digunakan untuk Rp{$uang}: <br>";

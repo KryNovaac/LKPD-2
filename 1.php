@@ -1,22 +1,18 @@
+
+
 <?php
-function checkSpecialCharacters($sentence) {
-    $specialCharacters = ['!', '*', '$']; 
+$string = 'awojdoa oinawifnokawn oawjfoiawnf 12 as j) awhf+ awfni! eafew# srknv$';
 
-    $count = 0;
-    foreach ($specialCharacters as $symbol) {
-        if (strpos($sentence, $symbol) !== false) {
-            $count++;
-        }
-    }
+echo "Teks : $string<br>";
 
-    if ($count > 0) {
-        echo "Karakter yang terdapat pada kalimat: " . implode(', ', $specialCharacters);
-    } else {
-        echo "Tidak terdapat simbol pada kalimat.";
-    }
+$specialCharacters = preg_match_all('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $string, $matches);
+
+
+echo "<br>";
+
+if ($specialCharacters > 0) {
+    echo "Karakter yang mengandung simbol: " . implode(", ", $matches[0]);
+} else {
+    echo "Tidak terdapat simbol dalam kalimat.";
 }
-
-$Teks = "Ini adalah kalimat dengan simbol ! dan *";
-echo "Teks : $Teks <br>";
-checkSpecialCharacters($Teks);
 ?>

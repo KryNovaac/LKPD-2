@@ -1,5 +1,5 @@
 <?php
-function truncateText($text, $maxLength = 50) {
+function Text($text, $maxLength = 50) {
     if (mb_strlen($text) <= $maxLength) {
         return $text;
     } else {
@@ -8,7 +8,7 @@ function truncateText($text, $maxLength = 50) {
 }
 
 $kalimat = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-$kalimatTerpotong = truncateText($kalimat);
+$kalimatTerpotong = Text($kalimat);
 
 echo "Kalimat terpotong: {$kalimatTerpotong}\n";
 ?>
